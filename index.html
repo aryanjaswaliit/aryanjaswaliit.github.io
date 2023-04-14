@@ -44,12 +44,19 @@
   </body>
   <script>
     // Check if screen width is greater than or equal to 768px
+    let urlParams = new URLSearchParams(window.location.search);
+    let query = urlParams.get('q');
+    if(query == "1"){
+   let ta = 1;
+    }
+   else{
 if (window.innerWidth >= 768) {
   // Redirect to desktop page
-  window.location.href = "https://aryanjaswaliit.github.io/desktop-1.html";
+  window.location.href = "desktop-1.html?q=1";
 } else {
   // Redirect to default page
-  window.location.href = "https://aryanjaswaliit.github.io/";
+  window.location.href = "index.html?q=1";
 }
+    }
   </script>
 </html>
