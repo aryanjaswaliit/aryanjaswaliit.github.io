@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<div class="mobile" style="display:none">
+   
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
     <link rel="stylesheet" href="./global.css" />
@@ -17,8 +16,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Baloo Bhai:wght@400&display=swap"
     />
-  </head>
-  <body>
+  
     <div class="android-large-1">
       <img class="android-large-1-child" alt="" src="./public/vector-2.svg" />
       <div class="welcome-in-aryan-container">
@@ -41,22 +39,56 @@
       </div>
       <img class="android-large-1-item" alt="" src="./public/vector-3.svg" />
     </div>
-  </body>
-  <script>
-    // Check if screen width is greater than or equal to 768px
-    let urlParams = new URLSearchParams(window.location.search);
-    let query = urlParams.get('q');
-    if(query == "1"){
-   let ta = 1;
+  
+</div>
+
+<!--desktop-->
+
+<div class="desktop" style="display:none">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./desktop-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Baloo Bhai:wght@400&display=swap"
+    />
+    <div class="desktop-1">
+        <div class="welcome-in-aryan-container2">
+          <span class="welcome-in-aryan-container3"
+            ><p class="welcome-in1">Welcome In</p>
+            <p class="aryan-dev1">
+              <span class="aryan-dev2">Aryan Dev</span
+              ><span class="span"> </span></p
+          ></span>
+        </div>
+        <img class="desktop-1-child" alt="" src="./public/vector-1.svg" />
+        <div class="home">Home</div>
+        <div class="resume1">Resume</div>
+        <div class="projects1">Projects</div>
+        <div class="contact">Contact</div>
+      </div>
+</div>
+
+<script>
+    let width = window.innerWidth;
+    if(width < 700){
+        document.getElementsByClassName("desktop")[0].style.display = "none";
+        
+        document.getElementsByClassName("mobile")[0].style.display = "";
+
+    }else{
+        document.getElementsByClassName("desktop")[0].style.display = "";
+        
+        document.getElementsByClassName("mobile")[0].style.display = "none";
     }
-   else{
-if (window.innerWidth >= 768) {
-  // Redirect to desktop page
-  window.location.href = "desktop-1.html?q=1";
-} else {
-  // Redirect to default page
-  window.location.href = "index.html?q=1";
-}
-    }
-  </script>
-</html>
+
+</script>
